@@ -6,6 +6,7 @@ Track & Plan
 * IBM IDとBluemix登録をする
 
 >[![](http://img.youtube.com/vi/dF2aeZiNGYk/0.jpg)](https://www.youtube.com/watch?v=dF2aeZiNGYk)
+3分16秒
 
 スクラムチームを作る
 ---
@@ -15,14 +16,17 @@ Track & Plan
 * プロジェクトへの参加をリクエストする
 
 >[![](http://img.youtube.com/vi/FvAV9MRnP7o/0.jpg)](https://www.youtube.com/watch?v=FvAV9MRnP7o)
+7分52秒
 
 * ユーザーは自分のプロファイルの作業環境を設定する
 
 >[![](http://img.youtube.com/vi/0wcHrJ5Hl8g/0.jpg)](http://www.youtube.com/watch?v=0wcHrJ5Hl8g)
+2分00秒
 
 * カテゴリーを登録する
 
 >[![](http://img.youtube.com/vi/ogIYCa5QvKQ/0.jpg)](http://www.youtube.com/watch?v=ogIYCa5QvKQ)
+37秒
 
 プロダクトバックログを作る
 ---
@@ -32,12 +36,14 @@ Track & Plan
 * プロダクトバックログをCSVファイルからインポートする
 
 >[![](http://img.youtube.com/vi/TftKhZqMqgw/0.jpg)](http://www.youtube.com/watch?v=TftKhZqMqgw)
+10分37秒
 
 スプリントの期間と回数を決めて登録する
 ---
 * スプリントを作成する
 
 >[![](http://img.youtube.com/vi/DCnRxUA7zbg/0.jpg)](https://www.youtube.com/watch?v=DCnRxUA7zbg)
+1分35秒
 
 リリースバックログを作成していつ頃何ができるかを見える化する
 ---
