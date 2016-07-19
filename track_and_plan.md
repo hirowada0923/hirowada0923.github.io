@@ -49,9 +49,15 @@ Track & Plan
 ---
 * リリースバックログを作る
 
+>[![](http://img.youtube.com/vi/qAdZOpLxPo4/0.jpg)](http://www.youtube.com/watch?v=qAdZOpLxPo4)
+5分23秒
+
 スプリント計画を立てる
 ---
 * スプリントバックログを作成する
+
+>[![](http://img.youtube.com/vi/dCjDP02b7Ao/0.jpg)](http://www.youtube.com/watch?v=dCjDP02b7Ao)
+2分43秒
 
 デイリースクラムでチームの状況を確認する
 ---
