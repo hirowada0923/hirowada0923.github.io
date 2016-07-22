@@ -59,6 +59,14 @@ Track & Plan
 >[![](http://img.youtube.com/vi/dCjDP02b7Ao/0.jpg)](http://www.youtube.com/watch?v=dCjDP02b7Ao)
 2分43秒
 
+* スプリントでの開発チームの総作業時間を確認する
+
+>![](https://www.evernote.com/l/ABdPb9Aj-v9JXKORUfY0AdF8d64GfdKvFNgB/image.png)
+
+* ストーリーポイントと見積時間、実績時間を見てポイントの見直しに役立てる
+
+>![](https://www.evernote.com/l/ABeBpT58kmVLkqs6NwTvgOnWNG48KWkcg4QB/image.png)
+
 デイリースクラムでチームの状況を確認する
 ---
 * スプリントバックログでチームおよびメンバーの進捗を確認する
@@ -73,13 +81,7 @@ Track & Plan
 
 * 見つかった欠陥やストーリーを登録する
 
-スプリントレビューの議事録を作成する
----
-* xxx
 
-スプリントレトロスペクティブを行う
----
-* xxx
 
 ワークアイテムの照会を作成する
 ---
