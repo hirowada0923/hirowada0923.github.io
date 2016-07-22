@@ -10,9 +10,9 @@ Track & Plan
 
 スクラムチームを作る
 ---
-* プロジェクトを作成する https://hub.jazz.net/docs/startproject/
-* ユーザーを招待する https://hub.jazz.net/docs/projectadmin/#managing_projects
-* 管理者を設定する https://hub.jazz.net/docs/projectadmin/#promoting_demoting
+* [プロジェクトを作成する](https://hub.jazz.net/docs/startproject/)
+* [ユーザーを招待する](https://hub.jazz.net/docs/projectadmin/#managing_projects)
+* [管理者を設定する](https://hub.jazz.net/docs/projectadmin/#promoting_demoting)
 * プロジェクトへの参加をリクエストする
 
 >[![](http://img.youtube.com/vi/FvAV9MRnP7o/0.jpg)](https://www.youtube.com/watch?v=FvAV9MRnP7o)
@@ -30,9 +30,9 @@ Track & Plan
 
 プロダクトバックログを作る
 ---
-* ストーリーを作成する http://www.ibm.com/support/knowledgecenter/ja/SSCP65_5.0.0/com.ibm.team.workitem.doc/topics/t_creating_work_items_web.html
+* [ストーリーを作成する](https://www.ibm.com/support/knowledgecenter/ja/SSYMRC_5.0.2/com.ibm.team.workitem.doc/topics/t_creating_work_items_web.html)
 * プロダクトバックログをCSVファイルにエクスポートする
-* EclipseからTrack & Plan に接続する https://hub.jazz.net/docs/gitclient/#eclipse_using_rtc
+* [EclipseからTrack & Plan に接続する](https://hub.jazz.net/docs/gitclient/#eclipse_using_rtc)
 * プロダクトバックログをCSVファイルからインポートする
 
 >[![](http://img.youtube.com/vi/TftKhZqMqgw/0.jpg)](http://www.youtube.com/watch?v=TftKhZqMqgw)
@@ -85,4 +85,4 @@ Track & Plan
 
 ワークアイテムの照会を作成する
 ---
-* xxx
+* [照会を作成する](https://www.ibm.com/support/knowledgecenter/ja/SSYMRC_5.0.2/com.ibm.team.workitem.doc/topics/t_creating_query_web.html)
