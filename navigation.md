@@ -1,4 +1,4 @@
-# Hiro's wiki
+# Markdown Wiki
 
 [Home](home.md)
 [About](about.md)
