@@ -157,6 +157,8 @@
   - Chapter 8. Using Models to help plan
   - Chapter 18. Agile Testing for Enterprise
   - Chapter 21. Agile Testing for Regulated Environment
+- [ISTQB Agile Testing Foundations](https://www.amazon.com/dp/B06Y116GD6)
+[![ITSQB Agile Testing Foundations](/ISTQB_agile.jpg)](https://www.amazon.com/dp/B06Y116GD6)
 - [QA to AQ: Shifting from Quality Assurance to Agile Quality](http://resources.sei.cmu.edu/library/asset-view.cfm?assetid=436589)
 
 - [アジャイルソフトウェア要求(いわゆるSAFe本) Dean Leffingwell](https://www.amazon.co.jp/dp/4798135321)
