@@ -1,12 +1,6 @@
 
-# アジャイル標準化のための情報提供
-このサイトでは、支援期間8月末までIBMのAgile Methodのコンテンツを提供をいたします。なお、IBM社内のサイトへのリンクはアクセスできません。
-
-## IBMのアジャイル標準プロセス
-IBMのプロセスは、Unified Method Architectureというメタモデル(開発標準やプロセスのための標準)に基づいて作成されています。開発標準やプロセスをオーサリングするツール[Eclipse Process Framework](https://projects.eclipse.org/projects/technology.epf)は、Eclipse Foundationに寄贈され自由に利用できます。([Eclipse Process Frameworkの日本語の紹介記事](http://blogs.itmedia.co.jp/nagap/2006/08/eclipse_process_f2cd.html))
-
-1. [IBM Agile with Discipline](/awd/)：2009年にOpenUPをベースに過去10年のIBMのAgileプロジェクトの経験を集約して開発
-2. [IBM Agile Method Framework](/amf/)：2015年にAgile with DisciplineをScrumをベースに一般のアジャイルのコンセプトや用語に合わせて改訂
+# 業務アプリケーションへのアジャイル適用時によくある質問
+このサイトでは、従来型開発からアジャイルへ移行する際によくある疑問について、思いつきで順不同で記載します。
 
 ## エンタープライズ・アジャイル
 
@@ -94,8 +88,13 @@ IBMのプロセスは、Unified Method Architectureというメタモデル(開�
 
 ## Q4. スプリントゼロの完了基準とは？
 
-- IBM Agile Method Frameworkの明確な完了基準としての記載はないが、[Sprint 0の説明](/amf/#process.tech.gbs_agile_frmwrk.base-ibm_int/customcategories/sprint_0_76C1CE9B.html)として記載されている。しかし、少し足りないと思われる。
-- スプリントゼロ開始前
+- DADの方向付けフェーズの完了基準が参考になる
+  - [Inception Goal](http://www.disciplinedagiledelivery.com/inception-goals-3/)
+  [![DAD Goals](/dad-phase.png)]()
+  - 方向付け
+  [![DAD Inception Phase](/dad-inception.png)]()
+
+- スプリントゼロ開始前サンプル
 
 | 分類 | 主な追加チェックの観点 |
 |:---------|:---------|
@@ -119,7 +118,7 @@ IBMのプロセスは、Unified Method Architectureというメタモデル(開�
 | ⑨品質戦略の定義と共有 | •スプリント/リリースごとに、アウトプットの品質を担保する品質戦略(Definition of Doneでも可)が策定され、メンバーと共有されていること。たとえば、ピア・レビュー、リグレッション・テスト、スプリント・レビューなど |
 | ⑩Velocity | •Velocityを測定し、測定されたVelocityを次回以降のSprintに適用する計画があること |
 
-- スプリントゼロ完了
+- スプリントゼロ完了サンプル
 
 | カテゴリーとレビュー観点サマリー | 成果物とチェックの観点(特記事項があれば） |
 |:---------|:---------|
@@ -149,15 +148,7 @@ IBMのプロセスは、Unified Method Architectureというメタモデル(開�
 |  | •スプリント・バーンダウン：Sprint0が期日までに達成可能か、工数が足りるか、予測しながら判断、管理されている |
 |  | •リスク・課題 |
 
-- DADの方向付けフェーズの完了基準が参考になる
-  - [Inception Goal](http://www.disciplinedagiledelivery.com/inception-goals-3/)
-  [![DAD Goals](/dad-phase.png)]()
-  - 方向付け
-  [![DAD Inception Phase](/dad-inception.png)]()
-
 ## Q5. 受け入れテストの自動化はどうあるべきか？
-
-- [IBM Agile Method Framework (Agile Testing)](/amf/#process.tech.gbs_agile_frmwrk.base-ibm_int/customcategories/agile_testing_7CCF0998.html)
 
 - [Agile Testing](https://www.amazon.com/dp/0321534468)
 - [More Agile Testing](https://www.amazon.com/dp/0321967054)
