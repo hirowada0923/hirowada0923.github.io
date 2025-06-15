@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Google Fonts: Inter for general text, Playfair Display for headings, Great Vibes for script title */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Great+Vibes&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif; /* General body font for readability */
+            background-color: #f8f8f8; /* Light grey background for the page */
+            display: flex;
+            justify-content: center; /* Center the invitation card horizontally */
+            align-items: flex-start; /* Align to the top vertically */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            padding: 3rem 1rem; /* Adjust padding for better overall framing */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+            font-size: 1.05rem; /* Default font size */
+        }
+        .invitation-container {
+            background-color: #FFFDF9; /* わずかにクリームがかった白でより柔らかく */
+            border-radius: 16px; /* Smooth rounded corners for a gentle look, slightly larger */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* 影を少し強めにし、浮遊感を出す */
+            width: 100%;
+            max-width: 750px; /* Maximum width for the invitation card on larger screens, slightly wider */
+            padding: 3rem; /* Inner padding for content, slightly more */
+            position: relative; /* Needed for absolute positioning of background image */
+            overflow: hidden; /* Ensures the background image respects border-radius */
+            text-align: center; /* Center align all text content */
+            border: 1px solid #f0e0d6; /* Very subtle light border */
+        }
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Cover the entire container, maintaining aspect ratio */
+            opacity: 0.15; /* 背景画像の透過度を上げて、見えるように */
+            z-index: 0; /* Place the image behind the text content */
+            /* Fallback for image loading errors: displays a placeholder if the image fails to load */
+            onerror="this.onerror=null;this.src='https://placehold.co/750x1000/F0F0F0/888888?text=Image+Not+Loaded'"
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            color: #333;
+        }
+        h1 {
+            font-family: 'Great Vibes', cursive, 'Playfair Display', serif; /* Only H1 uses script font */
+            font-weight: 800; /* Bold */
+            font-size: 4.5rem; /* さらに大きくして、華やかさを強調 */
+            line-height: 1.2;
+            color: #5d4037;
+            margin-bottom: 2rem; /* スペースを少し広げる */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.08); /* 影を強調 */
+        }
+        h2 {
+            font-family: 'Playfair Display', serif; /* H2 uses classical serif font */
+            font-weight: 700;
+            color: #8d6e63; /* Warm accent color for subheadings */
+            margin-bottom: 1.2rem; /* スペースを少し調整 */
+            font-size: 2.3rem; /* 少し大きく */
+        }
+        p, ul, ol, li { /* ulとolも追加 */
+            font-family: 'Inter', sans-serif; /* Body text uses Inter for readability */
+            font-size: 1.08rem; /* 少し大きく */
+            line-height: 1.7; /* 行間を広げ、読みやすく */
+            margin-bottom: 0.9rem; /* スペースを調整 */
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 450px; /* 少し広く */
+        }
+        ul li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.8rem; /* インデントを広げる */
+            position: relative;
+            font-size: 1.15rem; /* リスト項目も少し大きく */
+        }
+        ul li::before {
+            content: '•';
+            color: #8d6e63;
+            font-size: 1.3em; /* 箇条書きのドットを大きく */
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .section-divider {
+            /* 華やかな点線に変更 */
+            border-top: 2px dashed #d0c0b0; /* より柔らかい色で点線に */
+            margin: 4rem auto; /* 上下により広い余白をとり、ゆったりと */
+            width: 60%; /* 幅を少し狭めて洗練された印象に */
+            max-width: 300px; /* 最大幅を設定し、繊細さを保つ */
+        }
+        .map-container {
+            width: 100%;
+            height: 350px; /* マップの高さを少し大きく */
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px; /* マップの角も丸く */
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Responsive adjustments for smaller screens (e.g., mobile phones) */
+        @media (max-width: 768px) {
+            .invitation-container {
+                padding: 2rem 1.5rem; /* Reduce padding on smaller screens */
+                border-radius: 12px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                font-size: 3.2rem; /* Adjust H1 size for mobile */
+                margin-bottom: 1.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            p, ul, ol, li {
+                font-size: 1rem;
+                line-height: 1.5;
+                margin-bottom: 0.6rem;
+            }
+            ul li {
+                font-size: 1rem;
+                padding-left: 1.5rem;
+            }
+            ul li::before {
+                font-size: 1.1em;
+            }
+            .map-container {
+                height: 250px; /* Adjust map height for smaller screens */
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .section-divider {
+                margin: 2.5rem auto; /* モバイルでは余白を調整 */
+                width: 70%;
+            }
+        }
+        @media (max-width: 480px) {
+            .invitation-container {
+                padding: 1.5rem 1rem;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            p, ul, ol, li {
+                font-size: 0.95rem;
+            }
+            .map-container {
+                height: 200px;
+            }
+            .section-divider {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Chosen Palette: Warm Neutrals with Subtle Accents -->
+    <!-- Colors: #f8f8f8 (body background), #FFFDF9 (container background - off-white/cream), #5d4037 (dark brown for main title), #8d6e63 (medium brown/taupe for subheadings and accents), #e0e0e0 (light grey for dividers in previous iteration), #d0c0b0 (softer beige for dashed dividers). This creates a calm and harmonious feel, supportive of a romantic theme. -->
+    <!-- Application Structure Plan: The SPA is designed as a single, scrollable invitation card, mirroring a traditional invitation's informational flow but enhanced with interactive elements (Google Map). The structure is linear, moving from general announcement to specific details (Date, Time, Location, Access, Schedule, Dress Code, Ceremony Notes, RSVP, Personal Message). This logical sequence is chosen for its intuitive user experience, allowing guests to easily consume and understand all necessary information in a natural progression, rather than a dashboard or multi-view approach which would be overkill for an invitation. Key information is clearly sectioned with elegant headings and dividers. -->
+    <!-- Visualization & Content Choices:
+        - Main Title ("Wedding Invitation"): Goal: Emphasize elegance. Presentation: Large, bold, script font (Great Vibes). Justification: Sets a romantic, formal tone.
+        - Introductory Message ("To Our Dearest Family"): Goal: Convey warmth and personal welcome. Presentation: Readable sans-serif (Inter) with generous line-height. Justification: Ensures clarity for the core sentiment.
+        - Ceremony Details (Date, Time, Location): Goal: Present critical event information clearly. Presentation: Bulleted list with strong headings. Justification: Easy to scan and grasp key facts.
+        - Google Map: Goal: Provide interactive geographical context. Presentation: Embedded iframe. Interaction: Pan, zoom. Justification: Essential for overseas guests' navigation.
+        - Access Notes: Goal: Offer practical travel advice. Presentation: Detailed paragraph below map. Justification: Anticipates guest needs for foreign travel.
+        - Schedule & Dress Code: Goal: Inform about event flow and attire. Presentation: Bulleted lists. Justification: Clear, concise instructions.
+        - Notes for the Ceremony: Goal: Communicate specific etiquette. Presentation: Paragraph. Justification: Avoids misunderstandings during the event.
+        - RSVP & Message from the Couple: Goal: Provide action items and personal touch. Presentation: Clear headings with placeholder text. Justification: Allows for personalization and response.
+        - All text content from uploaded file '招待状1.html' is integrated into its respective sections.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <div class="invitation-container">
+       <img src="https://i.imgur.com/Et5028R.jpeg" alt="エッフェル塔" class="background-image" onerror="this.onerror=null;this.src='https://placehold.co/700x1000/F0F0F0/888888?text=画像が見つかりません'">
+
+        <div class="content">
+            <h1 class="text-4xl font-bold mb-6 text-[#5d4037]">Wedding Invitation</h1>
+            <div class="section-divider"></div>
+
+            <h2 class="text-2xl font-semibold mb-4 text-[#8d6e63]">To Our Dearest Family</h2>
+            <p class="text-lg mb-6">
+                この度、私たちは結婚式を挙げることになりました。<br>
+                つきましては、日頃お世話になっております皆様に感謝をお伝えしたく、ささやかながら結婚式を執り行います。ご多忙中とは存じますが、ぜひご出席いただけましたら幸いです。
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2 class="text-2xl font-semibold mb-4 text-[#8d6e63]">Ceremony Details</h2>
+            <ul class="text-left mx-auto max-w-sm">
+                <li>
+                    <strong>日時</strong>：<br>
+                    2025年9月29日（月）13時30分
+                </li>
+                <li>
+                    <strong>場所</strong>：<br>
+                    アメリカン・チャーチ（The American Church in Paris）<br>
+                    65 Quai d'Orsay, 75007 Paris, France
+                </li>
+            </ul>
+
+            <!-- Google Map Embed Section -->
+            <div class="map-container">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.792652203568!2d2.3043782119039338!3d48.86216417121314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fdbe3fdd93f%3A0x43255f5ec547c071!2z44Ki44Oh44Oq44Kr44Oz44O744OB44Oj44O844OB!5e0!3m2!1sja!2sjp!4v1749904663411!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+            <p class="text-lg mb-6 text-left mx-auto max-w-sm">
+                <strong class="text-[#8d6e63]">【アクセス補足】</strong><br>
+                タクシーをご利用の場合は上記住所を知らせてください。アメリカン・チャーチという名称では伝わらないことがあります。<br>
+                タクシーは挙式前日にホテルでの予約をお勧めしています。早めに到着された場合、他のお客様の挙式中の可能性がありますので、回廊などでお待ちください。
+            </p>
+
+            <ul class="text-left mx-auto max-w-sm">
+                <li>
+                    <strong>スケジュール</strong>：<br>
+                    集合 13時15分<br>
+                    1時間程度で終了予定です。
+                </li>
+                <li>
+                    <strong>服装</strong>：<br>
+                    日本での結婚式と同様の服装で構いません。教会ですので、過度な露出はお控えいただけますようお願いいたします。
+                </li>
+            </ul>
+
+            <div class="section-divider"></div>
+
+            <h2 class="text-2xl font-semibold mb-4 text-[#8d6e63]">Notes for the Ceremony</h2>
+            <p class="text-lg mb-6 text-left mx-auto max-w-sm">
+                挙式中は写真撮影NGとなっておりますので<br>
+		ご遠慮ください。
+            </p>
+
+            <div class="section-divider"></div>
+
+            <h2 class="text-2xl font-semibold mb-4 text-[#8d6e63]">緊急連絡先</h2>
+            <p class="text-lg mb-6">
+                ワタベウェディング・パリ店(月〜金 9時〜17時)　<br>
+		01.48.78.33.11　または　06.21.06.75.09
+            </p>
+
+
+            <div class="section-divider"></div>
+            <p class="text-sm text-gray-500 mt-8">　　　</p>
+        </div>
+    </div>
+</body>
+</html>
