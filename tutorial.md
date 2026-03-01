@@ -11,6 +11,7 @@
 
 そこで重要になるのが、**「Agent-Ready（AIエージェントにとって準備が整った）な環境」**を作ることです。
 本記事では、Pythonの受注管理システム（FastAPIベース）のサンプルプロジェクトを中心として、**既存システムをAIにとって安全で開発しやすい環境へと進化させる方法**を解説します。
+*本記事のコード例で引用したプロジェクトの実装は、[`hirowada0923/agent-ready-oms` リポジトリ](https://github.com/hirowada0923/agent-ready-oms) をご参照ください。*
 
 ---
 
@@ -117,4 +118,3 @@ def verify_architecture(file_path: str, content: str) -> str:
 Vibe Codingのスピード感を保ったまま、チーム開発の堅牢性を両立する。それがこれからのAIネイティブなソフトウェア開発の姿です。
 
 ---
-*本記事のコード例で引用したプロジェクトの実装は、[`hirowada0923/agent-ready-oms` リポジトリ](https://github.com/hirowada0923/agent-ready-oms) をご参照ください。*
