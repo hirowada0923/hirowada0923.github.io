@@ -131,6 +131,14 @@
 </head>
 
 <body class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <nav class="max-w-4xl mx-auto mb-8 flex justify-center space-x-4">
+        <a href="?page=tutorial.md"
+            class="px-4 py-2 rounded-full text-sm font-medium transition-colors bg-white/70 backdrop-blur-md border border-white/30 shadow-sm hover:bg-white text-slate-700 hover:text-brand-600">Tutorial:
+            Agent-Ready Environment</a>
+        <a href="?page=case_study.md"
+            class="px-4 py-2 rounded-full text-sm font-medium transition-colors bg-white/70 backdrop-blur-md border border-white/30 shadow-sm hover:bg-white text-slate-700 hover:text-brand-600">Case
+            Study: Evolution to Agent-Ready</a>
+    </nav>
     <main class="max-w-4xl mx-auto glass-card p-6 sm:p-12 lg:p-16">
         <article id="content" class="markdown-body opacity-0 transition-opacity duration-700">
             <div class="flex justify-center items-center py-20">
@@ -155,8 +163,20 @@
             breaks: true
         });
 
+        // Get page from URL query parameter, default to tutorial.md
+        const urlParams = new URLSearchParams(window.location.search);
+        const page = urlParams.get('page') || 'tutorial.md';
+
+        // Highlight active nav link
+        document.querySelectorAll('nav a').forEach(link => {
+            if (link.getAttribute('href') === `?page=${page}`) {
+                link.classList.add('bg-white', 'text-brand-600', 'ring-2', 'ring-brand-200');
+                link.classList.remove('text-slate-700');
+            }
+        });
+
         // Fetch and render markdown
-        fetch('tutorial.md')
+        fetch(page)
             .then(response => {
                 if (!response.ok) throw new Error('Markdown file not found');
                 return response.text();
@@ -170,7 +190,7 @@
             .catch(error => {
                 document.getElementById('content').innerHTML = `
                     <p class="text-red-500 mb-4">Error loading content: ${error.message}</p>
-                    <p class="text-slate-600">Please make sure the <code class="bg-red-50 text-red-700 px-1 rounded">tutorial.md</code> file exists in the repository root.</p>
+                    <p class="text-slate-600">Please make sure the <code class="bg-red-50 text-red-700 px-1 rounded">${page}</code> file exists in the repository root.</p>
                 `;
                 document.getElementById('content').classList.remove('opacity-0');
             });
